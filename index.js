@@ -44,28 +44,24 @@ function vasarol(tomb) {
    
 document.getElementById("feladat_3").innerHTML = `<p>A gyümölcsök ára összesen: ${vasarol(GYUMOLCSOK)}Ft</p>`;
 
-const Lista= []
+
 const TRELEM =document.querySelectorAll("tr")
 for (let index = 0; index < TRELEM.length; index++) {
-    TRELEM.addEventListener("click",function(){
+    TRELEM[index].addEventListener("click",function(){
         GYUMOLCSOK[index].nev
-        Lista.push(GYUMOLCSOK[index].nev)
+        vasarolt.push(GYUMOLCSOK[index].nev)
     })
 
 }
 
-const ELEM4= document.getElementById("feladat_2")
-ELEM4.innerHTML = 
 
 // 4. feladat
 function torolEsemeny() {
     /*const ELEM4 =document.getElementById("feladat_4")
     ELEM4.innerHTML=`<button>`
     "</button>"
-    ELEM4-addEventListener("click",function()){
-        ELEM4.classList.add("hide")*/
-}
-
-
+    ELEM4.addEventListener("click",function()){
+        ELEM4.classList.add("hide")
+}*/
 
 }
