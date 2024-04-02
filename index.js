@@ -18,8 +18,11 @@ function letrehozTablazat(tomb) {
     return txt
 
 }
-const ELEM = document.querySelector("#feladat_1")
-ELEM.innerHTML += letrehozTablazat(GYUMOLCSOK)
+//const ELEM = document.querySelector("#feladat_1")
+//ELEM.innerHTML += letrehozTablazat(GYUMOLCSOK)
+
+const ELEM = $("#feladat_1")
+ELEM.html += letrehozTablazat(GYUMOLCSOK)
 
 // 2. feladat
 function osszesit(tomb) {
@@ -29,9 +32,10 @@ function osszesit(tomb) {
     return osszeg
     }
 
-const ELEM2= document.getElementById("feladat_2")
-ELEM2.innerHTML = `<p>A gyümölcsök súlya összesen: ${osszesit(GYUMOLCSOK)}g</p>`;
-    
+//const ELEM2= document.getElementById("feladat_2")
+//ELEM2.innerHTML = `<p>A gyümölcsök súlya összesen: ${osszesit(GYUMOLCSOK)}g</p>`;
+const ELEM2 = $("#feladat_2")
+ELEM2.html += `<p>A gyümölcsök súlya összesen: ${osszesit(GYUMOLCSOK)}g</p>`;
 
 
 // 3. feladat
@@ -42,12 +46,14 @@ function vasarol(tomb) {
     return osszeg
 }
    
-document.getElementById("feladat_3").innerHTML = `<p>A gyümölcsök ára összesen: ${vasarol(GYUMOLCSOK)}Ft</p>`;
+//document.getElementById("feladat_3").innerHTML = `<p>A gyümölcsök ára összesen: ${vasarol(GYUMOLCSOK)}Ft</p>`;
+const ELEM3 = $("#feladat_3")
+ELEM2.html += `<p>A gyümölcsök ára összesen: ${vasarol(GYUMOLCSOK)}Ft</p>`;
 
 
-const TRELEM =document.querySelectorAll("tr")
+const TRELEM =$("tr")
 for (let index = 0; index < TRELEM.length; index++) {
-    TRELEM[index].addEventListener("click",function(){
+    TRELEM[index].on("click",function(){
         GYUMOLCSOK[index].nev
         vasarolt.push(GYUMOLCSOK[index].nev)
     })
